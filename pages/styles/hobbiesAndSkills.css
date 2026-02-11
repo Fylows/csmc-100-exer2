@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    background: linear-gradient(#264F59, #51A9BF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.header {
+    color: white;
+    margin-bottom: 3rem;
+}
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.hobbiesAndSkills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+/* Hobbies - horizontal scrolling */
+.hobbies {
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem 0;
+}
+
+.hobbyScroll {
+  display: flex;
+  gap: 2rem;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.hobbyItem {
+  flex-shrink: 0;
+  width: 200px;
+  text-align: center;
+}
+
+.hobbyItem img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hobbyItem p {
+  margin: 1rem 0 0 0;
+  color: white;
+  font-size: 1rem;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves left by half (duplicated items) */
+  }
+}
+
+/* Skills - static section */
+.skills {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.skillCategory h3 {
+  margin: 0 0 1.5rem 0;
+  color: #e9e9e9;
+  font-size: 1.5rem;
+}
+
+.skillCategory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.skillCategory img {
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.skillCategory img:hover {
+  transform: scale(1.2);
+}
+
+/* Make h3 take full width so icons wrap below */
+.skillCategory h3 {
+  width: 100%;
+}
+
+/* NAV BAR STYLES */
+#nav {
+    overflow: hidden;
+    position: fixed;
+    padding-bottom: 2rem;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+#unwrapped {
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#homeBtn {
+    position: relative;
+    z-index: 2;
+    background-color: rgb(75, 75, 75);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+#homeBtn > a > img {
+    filter: invert(1);
+}
+
+#wings {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    background-color: rgba(192, 192, 192, 0.8);
+    border-radius: 50px;
+    padding: 0 2rem 0 7rem; 
+    z-index: 1;
+}
+
+#wings a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+#wings a:hover {
+    color: var(--primary-red);
+}
+
+#wings a:nth-child(1) {
+    position: relative;
+    right: 1rem;
+}
+
+#wings a:nth-child(2) {
+    position: relative;
+    left: 3rem;
+
+}
+#wings a:nth-child(3) {
+    position: relative;
+    left: 2rem;
+}
+
+.burger a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.burger img {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+}
