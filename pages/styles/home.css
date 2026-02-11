@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --bg-color : #EDEDED;
     --primary-red : #C63A3A;
@@ -10,6 +12,8 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Jost', sans-serif;
+
 }
 
 body {
@@ -28,7 +32,6 @@ body {
     margin-bottom: 1.5rem;
     color: #263039;
 }
-
 
 .profilePic {
     z-index: -1;
