@@ -9,7 +9,7 @@
 
 body {
     margin: 30px;
-    background-color: linear-gradient(#264F59, #51A9BF);
+    background: linear-gradient(#264F59, #51A9BF);
     display: flex;
     flex-direction: column;
     align-items: center;
