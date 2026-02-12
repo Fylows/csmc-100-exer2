@@ -159,6 +159,7 @@ a {
 }
 
 #wings {
+    font-weight: bold;
     position: absolute;
     left: 0;
     right: 0;
@@ -192,7 +193,6 @@ a {
 }
 
 .burger a {
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
